@@ -1,21 +1,20 @@
-import { PortableTextBlock } from "sanity";
+// Sanity has been removed – simplified types without Sanity imports
 
 export type Author = {
   name: string;
-  image: string;
+  image?: string;
   bio?: string;
-  slug?: any;
+  slug?: string;
   _id?: number | string;
-  _ref?: number | string;
 };
 
 export type Blog = {
   _id: number;
   title: string;
-  slug: any;
+  slug: string;
   metadata?: string;
-  body?: PortableTextBlock[];
-  mainImage?: any;
+  body?: any; // Simplified – no longer depends on PortableTextBlock
+  mainImage?: string;
   author?: Author;
   tags?: string[];
   publishedAt?: string;
