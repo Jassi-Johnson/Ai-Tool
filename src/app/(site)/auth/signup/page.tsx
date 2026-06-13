@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation";
 
-// Sign-up page disabled – authentication removed.
-export default function SignupPage() {
+export default function AuthPage() {
   redirect("/");
 }
